@@ -1,0 +1,14 @@
+{
+    "name": "qcm-interface",
+    "version": "1.0.0",
+    "description": "Interface pour QCM",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5"
+    }
+}

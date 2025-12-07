@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM Université</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Static Data Loading -->
+    <script src="data/Andre.js"></script>
+    <script src="data/Bouchard.js"></script>
+    <script src="data/Dabbadie.js"></script>
+    <script src="data/Denoyelle.js"></script>
+    <script src="data/Dumortier.js"></script>
+    <script src="data/Herlem.js"></script>
+    <script src="data/Nutrition.js"></script>
+    <script src="data/Vasselin.js"></script>
+    <!-- End Static Data -->
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">🎓 QCM Direct</div>
+            <button id="reset-btn" class="hidden">Changer de cours</button>
+        </header>
+
+        <!-- View: Selection -->
+        <main id="selection-view">
+            <div class="hero">
+                <h1>Prêt à réviser ?</h1>
+                <p>Sélectionnez un professeur et un cours pour commencer.</p>
+            </div>
+            <div id="professors-list" class="grid-container">
+                <!-- Injected via JS -->
+            </div>
+        </main>
+
+        <!-- View: Quiz -->
+        <main id="quiz-view" class="hidden">
+            <div class="quiz-header">
+                <h2 id="course-title">Titre du cours</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <div class="stats">
+                    <span id="score-display">Score: 0/0</span>
+                </div>
+            </div>
+
+            <div id="questions-container">
+                <!-- Questions injected here -->
+            </div>
+
+            <div class="quiz-footer">
+                <button id="retry-btn" class="btn-secondary">Générer une nouvelle série</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
