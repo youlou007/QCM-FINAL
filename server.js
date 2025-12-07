@@ -6,7 +6,7 @@ const PORT = 3000;
 
 // Middleware
 app.use(cors());
-app.use(express.static('public'));
+app.use(express.static('.'));
 
 // Start server
 app.listen(PORT, () => {
