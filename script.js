@@ -152,9 +152,9 @@ function renderQuestions(questions) {
         // Options HTML
         const optionsHtml = q.options.map((opt) => {
             // Extract letter (A, B, C, D)
-            const letterMatch = opt.match(/^([A-D])\./);
+            const letterMatch = opt.match(/^([A-Z])\./);
             const letter = letterMatch ? letterMatch[1] : '?';
-            const text = opt.replace(/^[A-D]\.\s*/, '');
+            const text = opt.replace(/^[A-Z]\.\s*/, '');
 
             return `
                 <button class="option-btn" data-letter="${letter}" onclick="handleAnswer(${index}, '${letter}', this)">
